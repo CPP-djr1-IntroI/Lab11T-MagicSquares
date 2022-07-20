@@ -19,11 +19,11 @@ void openFile (ifstream &inStream);
 void closeFile (ifstream &inStream);
 void closeFile (ifstream &inStream);
 void readSquare (ifstream &inStream, int square[][MAX_COLS], int squareSize);
-void printSquare (int square[][MAX_COLS], int squareSize);
-bool isMagicSquare (int square[][MAX_COLS], int squareSize);
-bool testHorizontal (int square[][MAX_COLS], int squareSize, int sum);
-bool testVertical (int square[][MAX_COLS], int squareSize, int sum);
-bool testDiagonal (int square[][MAX_COLS], int squareSize, int sum);
+void printSquare (const int square[][MAX_COLS], int squareSize);
+bool isMagicSquare (const int square[][MAX_COLS], int squareSize);
+bool testHorizontal (const int square[][MAX_COLS], int squareSize, int sum);
+bool testVertical (const int square[][MAX_COLS], int squareSize, int sum);
+bool testDiagonal (const int square[][MAX_COLS], int squareSize, int sum);
 
 /******************************************************************************
  Function:     main
@@ -103,7 +103,7 @@ void closeFile (ifstream &inStream) {
 							 into the 2D array
 
  Parameters:   inputFile  - input file stream
-							 square     - 2D array that will hold the contents of the sqauare
+							 square     - 2D array that will hold the contents of the square
 							 squareSize - the size of the square
 
  Returned:     None
@@ -118,12 +118,12 @@ void readSquare (ifstream &inStream, int square[][MAX_COLS], int squareSize) {
  Description:  Display the contents of the array to the screen. Each number
 							 must be output in a width of 4.
 
- Parameters:   square     - 2D array that will hold the contents of the sqauare
+ Parameters:   square     - 2D array that will hold the contents of the square
 							 squareSize - the size of the square
 
  Returned:     None
 ******************************************************************************/
-void printSquare (int square[][MAX_COLS], int squareSize) {
+void printSquare (const int square[][MAX_COLS], int squareSize) {
 
 }
 
@@ -135,12 +135,12 @@ void printSquare (int square[][MAX_COLS], int squareSize) {
 							 testVertical. All rows, columns, and diagonals must add up to
 							 the target sum
 
- Parameters:   square     - 2D array that will hold the contents of the sqauare
+ Parameters:   square     - 2D array that will hold the contents of the square
 							 squareSize - the size of the square
 
  Returned:     true if all the sums are the same, false otherwise
 ******************************************************************************/
-bool isMagicSquare (int square[][MAX_COLS], int squareSize) {
+bool isMagicSquare (const int square[][MAX_COLS], int squareSize) {
 	bool bIsSquare = true;
 
 	return bIsSquare;
@@ -151,14 +151,14 @@ bool isMagicSquare (int square[][MAX_COLS], int squareSize) {
 
  Description:  Tests to see if all rows sum up to the target sum
 
- Parameters:   square     - 2D array that will hold the contents of the sqauare
+ Parameters:   square     - 2D array that will hold the contents of the square
 							 squareSize - the size of the square
 							 targetSum  - the sum of the first row
 
  Returned:     true if all the sum of all the rows are the same as the target
 							 sum, false otherwise
 ******************************************************************************/
-bool testHorizontal (int square[][MAX_COLS], int squareSize, int targetSum) {
+bool testHorizontal (const int square[][MAX_COLS], int squareSize, int targetSum) {
 	bool bIsEqual = true;
 
 	return bIsEqual;
@@ -169,14 +169,14 @@ bool testHorizontal (int square[][MAX_COLS], int squareSize, int targetSum) {
 
  Description:  Tests to see if all columns sum up to the target sum
 
- Parameters:   square     - 2D array that will hold the contents of the sqauare
+ Parameters:   square     - 2D array that will hold the contents of the square
 							 squareSize - the size of the square
 							 targetSum  - the sum of the first row
 
  Returned:     true if all the sum of all the columns are the same as the
 							 target sum, false otherwise
 ******************************************************************************/
-bool testVertical (int square[][MAX_COLS], int squareSize, int targetSum) {
+bool testVertical (const int square[][MAX_COLS], int squareSize, int targetSum) {
 	bool bIsEqual = true;
 
 	return bIsEqual;
@@ -187,14 +187,14 @@ bool testVertical (int square[][MAX_COLS], int squareSize, int targetSum) {
 
  Description:  Tests to see if the diagonal line sums up to the target sum
 
- Parameters:   square     - 2D array that will hold the contents of the sqauare
+ Parameters:   square     - 2D array that will hold the contents of the square
 							 squareSize - the size of the square
 							 targetSum  - the sum of the first row
 
  Returned:     true if all the sum of the diagonal is the same as the target
 							 sum, false otherwise
 ******************************************************************************/
-bool testDiagonal (int square[][MAX_COLS], int squareSize, int targetSum) {
+bool testDiagonal (const int square[][MAX_COLS], int squareSize, int targetSum) {
 	bool bIsEqual = true;
 
 	return bIsEqual;
